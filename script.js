@@ -42,6 +42,7 @@ genBtn.addEventListener("click", () => {
     }
 
     const qrImage = document.createElement("img");
+    crossOrigin="anonymous";
     qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(inputValue)}&color=9B5094&bgcolor=8fb8de`;
     qrImage.alt = "QR Code";
 

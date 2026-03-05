@@ -20,8 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
-                  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title h {
@@ -52,6 +51,7 @@ body {
     background-color: var(--grape-soda);
     color: var(--frozen-water);
 }
+
 .confetti-container {
     position: fixed;
     top: 0;
@@ -64,25 +64,28 @@ body {
 
 .confetti-piece {
     position: absolute;
-    width: 10px;
-    height: 20px;
-    animation: confetti-fall 3s linear forwards;
-    transform: translateY(-100vh) rotate(0deg);
+    width: 8px;
+    height: 12px;
+    animation: confetti-fall 4s linear forwards;
 }
 
 @keyframes confetti-fall {
     0% {
         opacity: 0;
+        transform: translateY(-100vh) rotate(0deg);
+        top: -10%;
     }
     10% {
         opacity: 1;
     }
-    90% {
+    50% {
         opacity: 1;
     }
+
     100% {
-        transform: translateY(100vh) rotate(720deg);
         opacity: 0;
+        transform: translateY(100vh) rotate(180deg);
+        top: 110%;
     }
 }
 
